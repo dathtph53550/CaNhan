@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cá Nhân</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links nav-left">
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#products">Sản Phẩm</a></li>
+            </ul>
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="MyStore Logo"></a>
+            </div>
+            <ul class="nav-links nav-right">
+                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+                <li id="cart-icon-container">
+                    <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <!-- Dropdown Giỏ Hàng -->
+                    <div id="cart-dropdown" class="cart-dropdown">
+                        <div class="cart-header">
+                            <h3>Giỏ Hàng Của Bạn</h3>
+                        </div>
+                        <div id="cart-items" class="cart-items"></div>
+                        <div class="cart-footer">
+                            <div class="cart-total">
+                                <strong>Tổng cộng:</strong> <span id="cart-total-price">0đ</span>
+                            </div>
+                            <button class="btn checkout-btn">Thanh Toán</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero-banner">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="https://images.pexels.com/photos/102129/pexels-photo-102129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Banner 1">
+                <div class="slide-content">
+                    <h1>Bộ Sưu Tập Mùa Hè</h1>
+                    <p>Khám phá những sản phẩm thời thượng và độc đáo nhất.</p>
+                    <a href="#products" class="btn">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Banner 2">
+                <div class="slide-content">
+                    <h1>Ưu Đãi Đặc Biệt</h1>
+                    <p>Giảm giá lên đến 50% cho các mặt hàng được chọn.</p>
+                    <a href="#products" class="btn">Xem Ưu Đãi</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Banner 3">
+                <div class="slide-content">
+                    <h1>Phong Cách Của Bạn</h1>
+                    <p>Tìm kiếm sản phẩm hoàn hảo thể hiện cá tính của bạn.</p>
+                    <a href="#products" class="btn">Khám Phá</a>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev">&#10094;</button>
+        <button class="slider-btn next">&#10095;</button>
+    </section>
+
+    <main>
+        <section id="products">
+            <h2>Sản phẩm của chúng tôi</h2>
+            <div id="loader"></div>
+            <div id="product-grid" class="project-grid">
+                <!-- Sản phẩm sẽ được chèn vào đây bằng JavaScript -->
+            </div>
+            
+        </section>
+    </main>
+
+    <section id="news">
+        <h2 class="section-title">Tin Tức & Bài Viết</h2>
+        <div class="news-grid">
+            <div class="news-card">
+                <img src="https://images.pexels.com/photos/102129/pexels-photo-102129.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Xu hướng thời trang">
+                <div class="news-content">
+                    <h3>Xu hướng thời trang 2025</h3>
+                    <p>Cập nhật những xu hướng thời trang mới nhất sẽ thống trị năm 2025.</p>
+                    <a href="#" class="read-more">Đọc thêm</a>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bí quyết phối đồ">
+                <div class="news-content">
+                    <h3>Bí quyết phối đồ layering</h3>
+                    <p>Học cách phối đồ nhiều lớp sành điệu và ấm áp cho mùa đông.</p>
+                    <a href="#" class="read-more">Đọc thêm</a>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="https://images.pexels.com/photos/1154861/pexels-photo-1154861.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chăm sóc trang phục">
+                <div class="news-content">
+                    <h3>Chăm sóc trang phục len</h3>
+                    <p>Những mẹo hay để giữ cho trang phục len của bạn luôn như mới.</p>
+                    <a href="#" class="read-more">Đọc thêm</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2 class="section-title">Khách Hàng Nói Gì Về Chúng Tôi</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"Sản phẩm tuyệt vời, chất lượng vượt trội. Dịch vụ khách hàng rất chuyên nghiệp và thân thiện. Tôi chắc chắn sẽ quay lại!"</p>
+                <div class="author">
+                    <span>Nguyễn An</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"Giao hàng siêu nhanh, đóng gói cẩn thận. Quần áo vừa vặn và đẹp y như hình. Rất hài lòng với trải nghiệm mua sắm tại đây."</p>
+                <div class="author">
+                    <span>Trần Bình</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"Bộ sưu tập đa dạng, luôn cập nhật những mẫu mã mới nhất. Tôi đã tìm thấy phong cách của mình nhờ cửa hàng này. 10/10!"</p>
+                <div class="author">
+                    <span>Lê Cúc</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Liên Hệ Với Chúng Tôi</h2>
+        <p class="section-subtitle">Có câu hỏi hoặc phản hồi? Đừng ngần ngại gửi cho chúng tôi một tin nhắn!</p>
+        <form class="contact-form">
+            <div class="form-group-row">
+                <input type="text" name="name" placeholder="Tên của bạn" required>
+                <input type="email" name="email" placeholder="Email của bạn" required>
+            </div>
+            <textarea name="message" placeholder="Nội dung tin nhắn..." rows="6" required></textarea>
+            <button type="submit" class="btn">Gửi Tin Nhắn</button>
+        </form>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column about">
+                <img src="images/logo.png" alt="MyStore Logo" class="footer-logo">
+                <p>Trang web mua sắm thời trang hàng đầu, mang đến những xu hướng mới nhất và trải nghiệm khách hàng tuyệt vời.</p>
+            </div>
+            <div class="footer-column links">
+                <h4>Liên Kết Nhanh</h4>
+                <ul>
+                    <li><a href="#">Về Chúng Tôi</a></li>
+                    <li><a href="#products">Sản Phẩm</a></li>
+                    <li><a href="#news">Tin Tức</a></li>
+                    <li><a href="#contact">Liên Hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social">
+                <h4>Kết Nối Với Chúng Tôi</h4>
+                <div class="social-icons">
+                    <a href="#" title="Facebook">FB</a>
+                    <a href="#" title="Instagram">IG</a>
+                    <a href="#" title="Twitter">TW</a>
+                    <a href="#" title="Pinterest">PI</a>
+                </div>
+            </div>
+            <div class="footer-column newsletter">
+                <h4>Đăng Ký Nhận Tin</h4>
+                <p>Nhận thông tin cập nhật về các sản phẩm mới và ưu đãi đặc biệt!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Nhập email của bạn...">
+                    <button type="submit">&rarr;</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MyStore. Thiết kế và phát triển bởi Cascade AI.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Chi Tiết Sản Phẩm -->
+    <div id="product-detail-modal" class="modal">
+        <div id="product-detail-content" class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-content-grid"> 
+                <div class="img-zoom-container">
+                    <img id="product-detail-img" src="" alt="Product Image">
+                    <div id="zoom-result" class="img-zoom-result"></div>
+                </div>
+                <div class="product-detail-info">
+                    <!-- Thông tin sẽ được JS điền vào -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
