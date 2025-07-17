@@ -201,7 +201,7 @@ nav ul li a:hover::after {
     transition: background-color 0.3s ease;
 }
 
-.slider-btn:hover {
+slider-btn:hover {
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
 }
 
@@ -605,87 +605,76 @@ footer {
 
 
 .site-footer {
-    background-color: var(--footer-background);
-    color: #a9a9a9;
-    padding: 4rem 2rem 0;
+    background: linear-gradient(135deg, #1e2022 0%, #2a2d30 100%);
+    color: #fff;
+    padding: 50px 0 20px;
+    margin-top: 80px;
 }
 
 .footer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
-.footer-column h4 {
+.footer-info,
+.footer-project-info {
+    padding: 20px;
+}
+
+.footer-info h4,
+.footer-project-info h4 {
     color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-column ul li a {
-    color: #a9a9a9;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 0.8rem;
-    transition: color 0.3s ease;
-}
-
-.footer-column ul li a:hover {
-    color: #fff;
-}
-
-.footer-logo {
-    height: 150px;
-    margin-bottom: 1rem;
-}
-
-.social-icons a {
-    color: #a9a9a9;
-    margin-right: 1rem;
     font-size: 1.5rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
 }
 
-.social-icons a:hover {
-    color: var(--gradient-end);
-}
-
-.newsletter-form {
-    display: flex;
-    margin-top: 1rem;
-}
-
-.newsletter-form input {
-    flex-grow: 1;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 5px 0 0 5px;
-}
-
-.newsletter-form button {
-    padding: 0.8rem 1rem;
-    border: none;
+.footer-info h4:after,
+.footer-project-info h4:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
     background: var(--gradient-start);
-    color: #fff;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
+}
+
+.footer-info p,
+.footer-project-info p {
+    color: #adb5bd;
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
 .footer-bottom {
     text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.footer-bottom p {
+    color: #adb5bd;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-info,
+    .footer-project-info {
+        padding: 15px;
+    }
+}
 
 /* --- Cart & Modal --- */
 
